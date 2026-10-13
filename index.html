@@ -16,17 +16,28 @@
         color: rgb(230, 202, 22)
         }
 
-        
     </style>
 </head>
 <body>
     <h1>SOCSCI CLUB MEMBERS LIST</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Member Information</h2>
+                        <p class="card-text">Please enter your first and last name below:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     <form action ="">
         <label for="firstName">First Name:</label>
         <input type="text" id="firstName" class="form-control" placeholder="Enter a name...">
         <br>
          <label for="lastName">Last Name:</label>
         <input type="text" id="lastName" class="form-control" placeholder="Enter a name...">
+        <br><br>
         <button type="button"  class="btn btn-primary" py-click="CheckMem" id="member">Enter</button>
     </form>
 

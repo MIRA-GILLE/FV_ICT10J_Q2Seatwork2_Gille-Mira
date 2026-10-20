@@ -5,7 +5,7 @@ def CheckMem(e):
     firstName = document.getElementById("firstName").value
     lastName = document.getElementById("lastName").value
 
-    confirm_mem = firstName in mem_bers
+    confirm_mem = 
 
     firstName = "Mira"
     firstName2 = "Dany"

@@ -1,13 +1,21 @@
+
 from pyscript import document
 
 def CheckMem(e):
-    mem_bers = ["Dany", "Mira"]
-    firstName = document.getElementById("firstName").value
-    lastName = document.getElementById("lastName").value
+    members = ["Keisha Valiente", "Mira Gille" , "Cameron Bufford" , "Gian Ibit"]
 
-    confirm_mem = firstName in mem_bers
+    first = document.getElementById("firstName").value
+    last = document.getElementById("lastName").value
 
-    firstName = "Mira"
-    firstName2 = "Dany"
-    lastName = "Gille"
-    message = (f"Congratulations {firstName} + {lastName}, you are a member of the group!") , (f"Sorry {firstName} + {lastName}, you are not a member of the group.")
+    valid = first == first.capitalize() and last == last.capitalize()
+
+    fullName = first + " " + last
+
+    result = members.count(fullName) == 1
+
+    message = (
+    (result) and f"Congratulations {fullName}! You are a member of the Social Sciences Club. See you there! :D"
+    or f"Sorry {fullName}, you are not a member of the Social Sciences Club. Better luck next time! ;)"
+    )
+
+    document.getElementById("output1").innerText = message

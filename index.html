@@ -3,48 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
     <title>Q2 Seatwork 1</title>
 
-    <style>
+<style>
 
-      
-        body{
-            text-align: center
-        
-        }
-        
-        h1{
-        color: rgb(230, 202, 22)
-        }
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        color: #674c03;
+        background-image: linear-gradient(rgba(112, 80, 7, 0.543), rgba(112, 80, 7, 0.543)), url("https://as1.ftcdn.net/v2/jpg/08/61/10/42/1000_F_861104224_zn93TcKNcMSArhqs4kpWFV01ZeHrkigo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
 
-    </style>
+    h1 {
+        color: rgb(236, 164, 19);
+        margin-top: 20px;
+    }
+
+    h2, p, label {
+        color: rgb(236, 164, 19);
+    }
+
+    .input-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .input-row input {
+        width: 150px;
+        color: #402F02;
+    }
+
+    .button-row {
+        margin: 20px;
+    }
+
+    #member {
+        background-color: #bf8a06;
+        color: #FFF8DC;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+    #output1 {
+        color: #dca204;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+.container {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col-md-8 {
+    width: 100%;
+    max-width: 600px;
+}
+
+.card {
+    background-color: #815805d3;
+    color: #9b750d;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.result-box {
+    background-color: #916712d3;
+    color: #402F02;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+</style>
 </head>
+
 <body>
-    <h1>SOCSCI CLUB MEMBERS LIST</h1>
+    <h1>SOCIAL SCIENCES CLUB MEMBERS LIST</h1>
+
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">Member Information</h2>
                         <p class="card-text">Please enter your first and last name below:</p>
+                        <br>
+                        <form>
+                            <div class="input-row">
+                    <div>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="Enter your first name..." required>
+                </div>
+                <br><br>
+
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Enter your last name..." required>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="button-row">
+        <button type="button" class="btn btn-primary" py-click="CheckMem" id="member">Enter</button>
+    </div>
+    <p>RESULT:</p>
+</form>
+
+                        <div class = "result-box">
+                             <div id="output1">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    <form action ="">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" class="form-control" placeholder="Enter your first name...">
-        <br>
-         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" class="form-control" placeholder="Enter your last name...">
-        <br><br>
-        <button type="button"  class="btn btn-primary" py-click="CheckMem" id="member">Enter</button>
-    </form>
+    </div>
 
-    <div id="output1"></div>
     <script type="py" src="main.py"></script>
 </body>
+
 </html>
